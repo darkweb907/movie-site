@@ -114,6 +114,7 @@ iframe {
     margin-bottom: 0;
   }
   form {
+    flex-direction: column;
     justify-content: center;
   }
   input[type="search"] {
@@ -122,5 +123,8 @@ iframe {
   main {
     padding: 0 1rem;
     background-color: #373b69;
+  }
+  button {
+    width: 94%;
   }
 }
