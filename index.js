@@ -57,7 +57,6 @@ movie(Api).then((dams) => {
  //check the video average
 
 let play = (id) => {
-    let first = 0;
     let btns = document.querySelectorAll(".btn")
     btns.forEach(btn => { 
         btn.addEventListener("click", () => {
@@ -138,7 +137,7 @@ form.addEventListener("input", (e) => {
                 // image.append(paste)
                 // show.append(image)
 
-                
+                play(dam.id)
             });
         })
     }
@@ -149,6 +148,7 @@ form.addEventListener("input", (e) => {
 let click = document.querySelector("#click")
 
 click.addEventListener("click", (e) => {
+    e.preventDefault();
     const pie = `${Base_url}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${key}`
     movie= async (url) => { 
         const response = await fetch(url)
@@ -190,7 +190,7 @@ click.addEventListener("click", (e) => {
                 // image.append(paste)
                 // show.append(image)
 
-               
+               play(dam.id)
 
             });
     })

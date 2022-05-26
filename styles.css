@@ -15,8 +15,7 @@ form {
 }
 input[type="search"] {
   border-block: none;
-  width: 20%;
-  /* height: 2rem; */
+
   border-radius: 5.5rem;
   background-color: #373b69;
   color: white;
@@ -108,4 +107,20 @@ iframe {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+@media (max-width: 414px) {
+  header {
+    background-color: #6b6f9baf;
+    margin-bottom: 0;
+  }
+  form {
+    justify-content: center;
+  }
+  input[type="search"] {
+    width: auto;
+  }
+  main {
+    padding: 0 1rem;
+    background-color: #373b69;
+  }
 }
